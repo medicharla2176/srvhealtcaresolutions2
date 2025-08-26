@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Health Care</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JS: use 'defer' so script runs after DOM is parsed -->
+  <script src="javascript.js" defer></script>
+</head>
+<body>
+  <section class="header">
+    <nav>
+      <a href="index.html"><img src="images/Srv_logo.jpg" alt="SRV Health Care Logo"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li class="dropdown">
+            <a href="#" aria-haspopup="true" aria-expanded="false">SERVICES <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href=""> Medical Billing Services</a></li>
+              <li><a href="">RISK ADJUSTMENT CODING</a></li>
+              <li><a href="#">HEDIS ABSTRACTION</a></li>
+              <li><a href="#">External Quality Review</a></li>
+              <li><a href="#">RADV AUDIT SERVICES</a></li>
+            </ul>
+          </li>
+          <li><a href="aboutus.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <a href="contact.html" class="enquire-btn">Enquire Now <span>&rarr;</span></a>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+  </section>
+
+  <section class="wrapper">
+  <i class="fa-solid fa-arrow-left button" id="prev" aria-label="Previous slide"></i>
+
+  <div class="image-container">
+    <div class="carousel">
+      <!-- SLIDE 1 -->
+      <div class="slide">
+        <img src="images/banner1.jpg" alt="banner 1">
+        <div class="banner-text">
+          <h1 class="heading">SRV <span class="accent">Information Technology</span> Services</h1>
+          <p class="desc">Srv IT Solutions technology to provide consistent outstanding performance from outsourced functions and services.</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 2 -->
+      <div class="slide">
+        <img src="images/banner2.webp" alt="banner 2">
+        <div class="banner-text">
+          <h1 class="heading">End-to-End <span class="accent">IT Solutions</span> Cloud Security Data</h1>
+      
+          <p class="desc">Delivering reliable, scalable, compliant systems for your business.</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 3 -->
+      <div class="slide">
+        <img src="images/banner3.jpg" alt="banner 3">
+        <div class="banner-text">
+          <h1 class="heading">Trusted <span class="accent">Technology Partner</span> Build Run Optimize</h1>
+         
+          <p class="desc">We keep your platforms fast, secure and future-ready.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <i class="fa-solid fa-arrow-right button" id="next" aria-label="Next slide"></i>
+</section>
+
+
+
+<!-- Courses Section -->
+<section class="course-section reveal slide-up">
+  <div class="service-heading">
+  <div class="line-group">
+    <div class="short"></div>
+    <div class="long"></div>
+  </div>
+
+  <span>SERVICES</span>
+
+  <div class="line-group">
+    <div class="short"></div>
+    <div class="long"></div>
+  </div>
+</div>
+
+  <h2 class="section-title">SRV Healthcare Solutions Provided Services</h2>
+
+  <!-- Wrapper for arrows + scrollable nav -->
+  <div class="course-wrapper">
+    <!-- Left Arrow -->
+    <button class="scroll-btn left"><i class="fas fa-chevron-left"></i></button>
+
+    <!-- Scrollable course nav -->
+    <div class="course-nav" id="courseNav">
+      <div class="course-card">
+        <div class="icon"><i class="fas fa-chart-pie"></i></div>
+        <h3>Medical Billing Services</h3>
+      </div>
+      <div class="course-card">
+        <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+        <h3>Risk Adjustment Coding</h3>
+      </div>
+      <div class="course-card">
+        <div class="icon"><i class="fas fa-globe"></i></div>
+        <h3>HEDIS Abstraction</h3>
+      </div>
+      <div class="course-card">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h3>External Quality Review</h3>
+      </div>
+      <div class="course-card">
+        <div class="icon"><i class="fas fa-book-open"></i></div>
+        <h3>RADV Audit Services</h3>
+      </div>
+    </div>
+
+    <!-- Right Arrow -->
+    <button class="scroll-btn right"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
+
+
+<section class="about-trending">
+  <div class="about-grid fade-in">    
+
+
+<!-- Text Block -->
+    <div class="about-text reveal slide-left">
+      <!-- <span class="section-subtitle">WHO WE ARE</span> -->
+      <h2>Medical Billing Services</h2>
+      <p class="subheading">
+     At SRV Healthcare Solutions, our medical billing services are designed to maximize revenue capture while reducing denials and delays. We ensure accurate charge entry, timely claim submission, and strict compliance with payer guidelines for faster reimbursements. With strong process controls, we help providers maintain transparency and improve overall financial health.
+      </p>
+      <p>
+       Through proactive denial management, customized reporting, and close client collaboration, we bring transparency and efficiency to the billing process. Our focus is on strengthening financial performance while supporting providers to deliver better patient care.
+      </p>
+    </div>
+   <!-- Image Block -->
+    <div class="about-image reveal slide-left">
+      <img src="images/risk-adjustment-code.webp" alt="Healthcare Training">
+    </div>
+
+
+<!-- Image Block -->
+    <div class="about-image reveal slide-left">
+      <img src="images/background.jpg" alt="Healthcare Training">
+    </div>
+
+ <!-- Text Block -->
+    <div class="about-text reveal slide-left">
+      <!-- <span class="section-subtitle">WHO WE ARE</span> -->
+      <h2>RISK ADJUSTMENT CODING</h2>
+      <p class="subheading">
+      At SRV Healthcare Solutions, we specialize in Risk Adjustment Coding (HCC) with a focus on accuracy, compliance, and transparency. Our certified coders capture complete diagnostic data to improve risk scoring, strengthen revenue integrity, and provide clear reporting.
+      </p>
+      <p>
+       At SRV, we go beyond coding to deliver personalized HCC solutions backed by continuous training, strong quality assurance, and strict CMS–HHS adherence. Guided by our values of Integrity, Innovation, and Excellence, we empower healthcare organizations to maximize reimbursements, stay compliant, and achieve long-term growth.
+       </p>
+    </div>
+
+     <!-- Text Block -->
+    <div class="about-text reveal slide-left">
+      <!-- <span class="section-subtitle">WHO WE ARE</span> -->
+      <h2>HEDIS ABSTRACTION</h2>
+      <p class="subheading">
+     SRV Healthcare Solutions delivers External Quality Review (EQR) services that provide an independent and unbiased evaluation of healthcare programs. Our focus is on measuring the effectiveness of care, assessing compliance with regulatory requirements, and identifying areas for improvement that truly impact patient outcomes.
+     </p>
+      <p>
+      With structured methodologies and experienced auditors, we provide objective assessments and actionable recommendations. This helps clients strengthen compliance, improve patient care delivery, and maintain the highest levels of quality assurance.
+      </p>
+    </div>
+    <!-- Image Block -->
+    <div class="about-image reveal slide-left">
+      <img src="images/background2.jpg" alt="Healthcare Training">
+    </div>
+
+
+     <!-- Image Block -->
+    <div class="about-image reveal slide-left">
+      <img src="images/background.jpg" alt="Healthcare Training">
+    </div>
+
+    <!-- Text Block -->
+    <div class="about-text reveal slide-left">
+      <!-- <span class="section-subtitle">WHO WE ARE</span> -->
+      <h2>External Quality Review</h2>
+      <p class="subheading">
+     At SRV Healthcare Solutions, our External Quality Review (EQR) services provide an independent evaluation of healthcare programs to ensure compliance, accountability, and improved care outcomes. We assess processes and performance against regulatory and contractual requirements, helping organizations trust and transparency.
+      </p>
+      <p>
+       By applying structured methodologies and evidence-based on assessments, we deliver clear insights and practical recommendation. This enables our clients to close performance gaps, enhance service delivery, and achieve in healthcare quality.
+      </p>
+    </div>
+
+<!-- Text Block -->
+    <div class="about-text reveal slide-left">
+      <!-- <span class="section-subtitle">WHO WE ARE</span> -->
+      <h2>RADV AUDIT SERVICES</h2>
+      <p class="subheading">
+      At SRV Healthcare Solutions, our RADV Audit Services focus on validating risk-adjustment data with accuracy and compliance. We review medical records, documentation, and coding practices to minimize errors and safeguard against audit risks.
+      </p>
+      <p>
+      Through precise audits and clear reporting, we help clients prevent revenue loss, strengthen compliance, and navigate RADV requirements with confidence.
+      </p>
+    </div>
+   <!-- Image Block -->
+    <div class="about-image reveal slide-left">
+      <img src="images/background.jpg" alt="Healthcare Training">
+    </div>
+
+  </div>
+</section>
+
+        
+<!-- second section who we are text -->
+<section class="why-section reveal slide-left">
+  <div class="why-container">
+    <h2 class="why-title">WHY SRV HEALTHCARE SOLUTIONS ?</h2>
+    <div class="why-grid">
+      <!-- Column 1 -->
+      <ul class="why-list">
+        <li>Trusted partner in Revenue Cycle Management, enabling providers to focus on delivering better patient care.</li>
+        <li>Expertise in Medical Billing, Coding, Accounts Receivable, Denials Management, and Clinical Documentation.</li>
+        <li>Experienced AAPC & AHIMA certified coding specialists ensuring accuracy and compliance.</li>
+        <li>Proven ability to streamline revenue cycle processes using automation, technology, and best practices.</li>
+        <li>24/7 operational support with strong business continuity and global service delivery.</li>
+        <li>Commitment to integrity, innovation, excellence, and compassion in every engagement.</li>
+      </ul>
+
+      <!-- Column 2 -->
+      <ul class="why-list">
+        <li>Scalable solutions tailored to healthcare systems, hospitals, and billing companies.</li>
+        <li>Strong focus on quality through audits, training, and coder calibration to maintain 100% compliance.</li>
+        <li>Ability to reduce denials, prevent revenue leakage, and accelerate reimbursements.</li>
+        <li>Continuous improvement through ongoing education and process optimization.</li>
+        <li>Compassionate approach that values employees, partners, and the communities we serve.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+ <section class="what-we-do">
+  <div class="container">
+    
+    <!-- Left: Image -->
+    <div class="what-image">
+      <img src="images/Srv_logo.jpg" alt="Healthcare Solutions">
+    </div>
+
+    <!-- Right: Text -->
+    <div class="what-text">
+      <h2>What We Do</h2>
+      <p>
+        At <strong>SRV Healthcare Solutions</strong>, we provide 
+        <strong>end-to-end healthcare and IT-enabled services</strong> that 
+        enhance revenue cycle management, ensure coding accuracy, and 
+        streamline compliance-driven operations. 
+      </p>
+      <p>
+        By combining <strong>expert teams, advanced technology, and proven processes</strong>, 
+        we help healthcare providers improve efficiency, reduce revenue leakage, 
+        and deliver better care outcomes.
+      </p>
+
+      <ul class="what-points">
+        <li><i class="fa-solid fa-hospital"></i> Comprehensive Healthcare Services – Billing, Coding & RCM.</li>
+        <li><i class="fa-solid fa-laptop-code"></i> Smart IT Solutions – Secure, scalable & future-ready.</li>
+        <li><i class="fa-solid fa-chart-line"></i> Data Insights – Performance analytics & revenue protection.</li>
+        <li><i class="fa-solid fa-handshake"></i> Long-term Partnership – Trust, transparency & compliance.</li>
+        <li><i class="fa-solid fa-bullseye"></i> Proven Results – Efficiency, accuracy & sustainable growth.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- WHO WE ARE -->
+<section class="info-section reveal slide-left">
+  <div class="info-container">
+    <span class="info-subtitle">WHO WE ARE</span>
+    <h2 class="info-title">Quality Assured Health Care and IT Solutions</h2>
+    <p class="info-text">SRV Healthcare Solutions is a trusted partner in Revenue Cycle Management(RCM), empowering healthcare providers, hospitals, and billing companies to achieve seamless operations and financial excellence. We are committed to delivering quality-assured healthcare and IT solutions that reduce denials, accelerate reimbursements, and improve compliance. With a foundation built on Integrity, Innovation, Courage, Excellence, and Compassion, we bring together skilled professionals, robust processes, and advanced technologies to ensure accuracy, transparency, and measurable outcomes for our clients. </p>
+      
+    <p class="info-text">Driven by a spirit of continuous innovation, we apply deep industry expertise and cumulative knowledge to design solutions that are sustainable, scalable, and tailored to each client’s needs. Beyond business, our vision extends to empowering our employees, partners, alumni, shareholders, and the communities we live in to grow and thrive with us.</p>
+  </div>
+</section>
+
+
+
+  
+
+ <!-- JavaScript for Menu Toggle -->
+<script>
+   function showMenu() {
+    document.getElementById("navLinks").style.right = "0";
+}
+function hideMenu() {
+    document.getElementById("navLinks").style.right = "-200px";
+}
+  </script>
+
+<!-- --------footer section- -->
+<footer class="main-footer">
+  <div class="footer-container">
+    
+    <!-- Our Courses -->
+    <div class="footer-column">
+      <h3>Our Services</h3>
+      <ul>
+       <li><a href="#">&gt;  Medical Billing Services</a></li>
+        <li><a href="#">&gt; RISK ADJUSTMENT CODING</a></li>
+        <li><a href="#">&gt; HEDIS ABSTRACTION</a></li>
+        <li><a href="#">&gt; External Quality Review</a></li>
+        <li><a href="#">&gt; RADV AUDIT SERVICES</a></li>
+      </ul>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+     <li><a href="index.html"><span class="icon">&gt;</span> Home</a></li>
+        <li><a href="about.html"><span class="icon">&gt;</span> About Us</a></li>
+        <li><a href="contact.html"><span class="icon">&gt;</span> Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Address -->
+    <div class="footer-column">
+  <h3>Address</h3>
+  
+  <p class="footer-item">
+    <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 2c4.418 0 8 3.582 8 8 0 6-8 12-8 12S4 16 4 10c0-4.418 3.582-8 8-8z" />
+      <circle cx="12" cy="10" r="3" fill="currentColor"/>
+    </svg>
+    418, 4th Floor, Nilgiri Block, Adithya Enclave, beside Metro Station Ameerpet, Hyderabad.
+  </p>
+
+ <p class="footer-item">
+  <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M6.6,10.8c1.3,2.6,3.4,4.7,6,6l2-2c0.2-0.2,0.5-0.2,0.8-0.1c0.9,0.4,1.9,0.6,2.9,0.6c0.4,0,0.7,0.3,0.7,0.7v3.2
+      c0,0.4-0.3,0.7-0.7,0.7C10.5,20,4,13.5,4,6.7C4,6.3,4.3,6,4.7,6h3.2c0.4,0,0.7,0.3,0.7,0.7c0,1,0.2,2,0.6,2.9
+      c0.1,0.3,0.1,0.6-0.1,0.8L6.6,10.8z"/>
+  </svg>
+  <a href="tel:+919001234567">+91 9001234567</a>
+</p>
+
+  <!-- Email -->
+<p class="footer-item">
+  <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1 0.9 2 2 2h16c1.1 0 2-0.9 2-2V6c0-1.1-0.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+  </svg>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@yourcompany.com" target="_blank">
+    info@yourcompany.com
+  </a>
+</p>
+</div>
+<!-- Logo -->
+    <div class="footer-column logo-section">
+      <h3>SRV HEALTCARE <br>SOLUTIONS</h3>
+      <img src="images/logo3.png" alt="Company Logo" class="footer-logo">
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Your Company | Designed & Developed by Teja</p>
+  </div>
+</footer>
+  </div>
+
+
+
+
+<!-- Social Media Icons -->
+<div class="footer-social">
+  <a href="https://www.facebook.com/yourpage" target="_blank" class="social-icon facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://www.instagram.com/yourpage" target="_blank" class="social-icon instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.linkedin.com/company/yourpage" target="_blank" class="social-icon linkedin">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  <a href="https://www.youtube.com/yourpage" target="_blank" class="social-icon youtube">
+    <i class="fab fa-youtube"></i>
+  </a>
+</div>
+
+
+
+</footer>
+<!-- </section> -->
+
+ <!-- JavaScript for Menu Toggle -->
+<script>
+   function showMenu() {
+    document.getElementById("navLinks").style.right = "0";
+}
+function hideMenu() {
+    document.getElementById("navLinks").style.right = "-200px";
+}
+  </script>
+
+
+</body>
+</html>
