@@ -209,3 +209,161 @@ document.addEventListener("DOMContentLoaded", function () {
   // highlight & center first card on load
   centerCard(cards[0]);
 });
+
+
+
+// loader
+
+
+// ===============================
+// 🌐 Global Loader Functionality
+// ===============================
+window.addEventListener("load", function() {
+  const loader = document.getElementById("global-loader");
+  setTimeout(() => loader.classList.add("hidden"), 600);
+});
+
+document.addEventListener("click", function(e) {
+  const btn = e.target.closest("button, a"); // covers both buttons and links
+  if (btn) {
+    const loader = document.getElementById("global-loader");
+    loader.classList.remove("hidden");
+    setTimeout(() => loader.classList.add("hidden"), 1500);
+  }
+});
+
+
+
+
+// Test monials
+
+// testimonials.js
+document.addEventListener("DOMContentLoaded", function () {
+  const track = document.querySelector(".testimonial-track");
+  const cards = Array.from(document.querySelectorAll(".testimonial-card"));
+  const dots = document.querySelectorAll(".dot");
+  let currentIndex = 0;
+  let autoScroll = null;
+
+  const getVisibleCount = () => (window.innerWidth >= 992 ? 3 : 1);
+  const getMaxIndex = () => Math.max(0, cards.length - getVisibleCount());
+
+  function moveTo(index, highlightIndex = null) {
+    const visible = getVisibleCount();
+    const maxIndex = getMaxIndex();
+    currentIndex = Math.max(0, Math.min(index, maxIndex));
+
+    const movePercent = (100 / visible) * currentIndex;
+    track.style.transform = `translateX(-${movePercent}%)`;
+
+    cards.forEach((c, i) => c.classList.toggle("active", i === (highlightIndex ?? currentIndex)));
+    updateDots();
+  }
+
+  function updateDots() {
+    dots.forEach(d => d.classList.remove("active"));
+    const max = getMaxIndex();
+    if (currentIndex === 0) dots[0].classList.add("active");
+    else if (currentIndex >= max) dots[2].classList.add("active");
+    else dots[1].classList.add("active");
+  }
+
+  // Dot button actions
+  dots[0].addEventListener("click", () => {
+    moveTo(currentIndex - 1);
+    resetAutoScroll();
+  });
+  dots[1].addEventListener("click", () => resetAutoScroll());
+  dots[2].addEventListener("click", () => {
+    moveTo(currentIndex + 1);
+    resetAutoScroll();
+  });
+
+  // Card click highlight and scroll
+  cards.forEach((card, i) => {
+    card.addEventListener("click", () => {
+      const visible = getVisibleCount();
+      const leftIndex = visible === 1 ? i : Math.max(0, Math.min(i - Math.floor(visible / 2), getMaxIndex()));
+      moveTo(leftIndex, i);
+      resetAutoScroll();
+    });
+  });
+
+  // Auto scroll
+  function startAutoScroll() {
+    stopAutoScroll();
+    autoScroll = setInterval(() => {
+      if (currentIndex < getMaxIndex()) moveTo(currentIndex + 1);
+      else moveTo(0);
+    }, 5000);
+  }
+
+  function stopAutoScroll() {
+    if (autoScroll) clearInterval(autoScroll);
+  }
+
+  function resetAutoScroll() {
+    stopAutoScroll();
+    startAutoScroll();
+  }
+
+  window.addEventListener("resize", () => moveTo(currentIndex));
+  moveTo(0);
+  startAutoScroll();
+});
+
+
+
+// contact us page sucess popup message 
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".contact-form form");
+  const popup = document.getElementById("successPopup");
+
+  if (!form || !popup) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    popup.style.display = "flex";
+    form.reset();
+  });
+});
+
+function closePopup() {
+  const popup = document.getElementById("successPopup");
+  popup.style.display = "none";
+}
+
+
+// take the message 
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+  const result = document.getElementById("result");
+
+  if (form) {
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      result.textContent = "Sending...";
+
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+          result.textContent = "✅ Your message was sent successfully!";
+          form.reset();
+        } else {
+          result.textContent = "❌ Error: " + (data.message || "Please try again.");
+        }
+      } catch (error) {
+        result.textContent = "⚠️ Network error. Please try again.";
+      }
+    });
+  }
+});

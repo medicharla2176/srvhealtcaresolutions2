@@ -171,7 +171,7 @@ nav .fa{
     display: block;
     padding: 14px 10px;  /* tighter spacing */
     font-size: 15px;     /* slightly smaller font */
-    white-space: nowrap; /* keep items in single line */
+    white-space: normal; /* keep items in single line */
     border-bottom: 1px solid rgba(255,255,255,0.1); /* optional divider */
   }
 nav .fa {
@@ -406,24 +406,33 @@ overflow: hidden;
   height: 200px;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #3e68b1;
+  color: #F57C00;
+  text-decoration: none;  /* removes underline/red line */
+  color: inherit;   
 }
 .course-card:hover {
-  background: #b1cde8;
-  color: #fff;
+  background: #F57C00;            /* darker blue hover background */
+  color: #fff;                    /* make text white */
   transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* make sure text and icon inside also turn white */
+.course-card:hover h3,
+.course-card:hover .icon {
+  color: #fff;
+}
+
 .course-card .icon {
   font-size: 36px;
-  margin-bottom: 10px;
-   color: #007bff;
+  margin-bottom: 15px;
+  margin-top: 15px;
+   color: #00bcd4;
   
 }
 
 .course-card h3 {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   margin: 0;
    color: #333;
@@ -431,11 +440,12 @@ overflow: hidden;
 }
 /* Section title */
 .section-title {
+  /* font-family: 'Poppins', sans-serif; */
   text-align: center;
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #22438c;
+  color: #111827;
 }
 
 /* Scroll Buttons on the cards in home page */
@@ -570,6 +580,7 @@ overflow: hidden;
   color: #fff;
   word-break: break-word;   /* break long words if needed */
   overflow-wrap: break-word;
+  
 }
 
 /* Active text */
@@ -580,7 +591,7 @@ overflow: hidden;
 ------------------- */
 .banner-text .heading {
   font-size: 52px;
-  font-weight: 800;
+  font-weight: 780;
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: #ffffff;
@@ -594,7 +605,7 @@ overflow: hidden;
 /* Accent color in heading */
 .banner-text .heading .accent,
 .banner-text .sub .accent {
-  color: #00c4ff;
+  color: #F57C00;
 }
 
 /* Force wrapping for H1 + H2 after ~40 chars */
@@ -607,7 +618,7 @@ overflow: hidden;
 
 /* Paragraph */
 .banner-text .desc {
-  font-size: 20px;
+  font-size: 25px;
   line-height: 1.6;
   color: #e6e6e6;
   font-family: 'Open Sans', sans-serif;
@@ -725,6 +736,7 @@ overflow: hidden;
 
 /* ===services heading===== */
 .service-heading {
+font-family: 'Poppins', sans-serif;
     display: flex;
   align-items: center;
   justify-content: center;
@@ -733,6 +745,7 @@ overflow: hidden;
   font-size: 18px;
   font-weight: 600;
   color: #00bcd4;
+ 
 }
 
 /* group of 2 stacked lines */
@@ -859,9 +872,9 @@ overflow: hidden;
 }
 
 /* Hover effects */
-.about-image:hover img {
+/* .about-image:hover img {
   transform: scale(1.08);
-}
+} */
 
 .about-image:hover::after {
   background: rgba(0,0,0,0.2);
@@ -1140,12 +1153,13 @@ overflow: hidden;
 .sub-header{
   height: 60vh;
   width: 100%;
-  background-image:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/banner1.jpg);
+  background-image:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/bannerwith-5.png);
   background-position: center;
   background-size: cover;
   text-align: center;
   color: #fff;
   margin-bottom: 60px;
+  
   
 }
 .sub-header h1{
@@ -1158,6 +1172,7 @@ opacity: 0;
   transform: translateY(40px);
   animation: fadeUp 1.2s ease-out forwards;
   animation-delay: 0.4s; /* start after a short delay */
+font-family: "Nunito", sans-serif;
 }
 
 /* Keyframes for fade + slide up */
@@ -1176,6 +1191,7 @@ opacity: 0;
 
   .sub-header h1 {
     font-size: 28px; /* smaller heading */
+    font-family: "Nunito", sans-serif;
   }
 }
 
@@ -1184,11 +1200,17 @@ opacity: 0;
   .sub-header {
     height: 30vh;  /* shrink more on mobile */
     background-position: top; /* focus top area of image */
+    justify-content: center;
+    position: relative;
+    margin-bottom: 30px;  
+    
   }
 
   .sub-header h1 {
     font-size: 22px; /* smaller heading */
-    margin-top: 40px; /* adjust spacing */
+    margin-top: 80px; /* adjust spacing */
+font-weight: 600;
+ font-family: "Nunito", sans-serif;
   }
 }
 
@@ -1305,6 +1327,10 @@ font-size: 16px;
 .footer-column h3 {
   font-size: 18px;
   margin-bottom: 15px;
+  font-weight: 850;
+  font-family: "Nunito", sans-serif;
+
+
 }
 
 .footer-column ul {
@@ -1323,6 +1349,7 @@ font-size: 16px;
   align-items: center;
   gap: 8px;
   transition: transform 0.3s ease, color 0.3s ease;
+  
 }
 
 .footer-column ul li a .icon {
@@ -1349,6 +1376,7 @@ font-size: 16px;
 .footer-column a:visited,
 .footer-item a:visited {
   color: white;
+  
 }
 
 /* Hover color */
@@ -1727,4 +1755,242 @@ font-size: 16px;
     transform: translateY(0);
   }
 }
+
+/* ===== Success Popup ===== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none; /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: popupFadeIn 0.4s ease;
+}
+
+.popup-box h3 {
+  color: #28a745;
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.popup-box button {
+  background: #28a745;
+  border: none;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.popup-box button:hover {
+  background: #218838;
+}
+
+@keyframes popupFadeIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+
+/* all pages loader */
+
+/* ==== Global Page Loader (2025 Modern Style) ==== */
+#global-loader {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.96);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hidden state */
+#global-loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Loader outer ring */
+.loader {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 6px solid transparent;
+  border-top-color: #0066ff;
+  border-right-color: #00c3ff;
+  animation: spin 1s linear infinite;
+  position: relative;
+}
+
+/* Inner glowing dot */
+.loader-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  background: #00aaff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Glow pulse animation */
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  50% { transform: translate(-50%, -50%) scale(1.4); opacity: 0.6; }
+}
+
+
+
+
+
+/* Test monials */
+/* testimonials.css */
+
+.testimonial-section {
+  text-align: center;
+  background: #fff;
+  padding: 5px 2px 50px;
+  overflow: hidden;
+}
+.testimonial-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;  /* 👈 adds space below the heading */
+}
+
+.testimonial-slider {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.testimonial-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.testimonial-card {
+  flex: 0 0 calc(33.333% - 20px);
+  margin: 10px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* ✅ Active card highlight without border */
+.testimonial-card.active {
+  background-color: #ecce92; /* soft orange highlight */
+  /* box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4); */
+  transform: scale(1.05);
+}
+
+/* Text styling */
+.testimonial-card h3 {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.testimonial-card span {
+  color: #666;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.testimonial-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Dots */
+.testimonial-dots {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dot.active {
+  background: #ff9800;
+}
+
+/* Show only one card in responsive mode */
+/* MOBILE: ensure exactly one card visible — no peeking neighbors */
+@media (max-width: 991px) {
+  /* remove track gap/padding so neighbor cards cannot show */
+  .testimonial-track {
+    gap: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* each card occupies full slider width */
+  .testimonial-card {
+    flex: 0 0 100% !important;   /* full width */
+    max-width: 100% !important;
+    margin: 0 !important;        /* remove margins that cause peeking */
+    box-sizing: border-box;
+  }
+
+  /* optionally make slider padding 0 so edges exactly align */
+  .testimonial-slider {
+    padding: 0 !important;
+  }
+
+  /* ensure scroll-snap so touch moves to exact card */
+  .testimonial-slider, .testimonial-track {
+    scroll-snap-type: x mandatory;
+  }
+  .testimonial-card { scroll-snap-align: center; }
+}
+
 
