@@ -1061,6 +1061,7 @@ font-family: 'Poppins', sans-serif;
   margin: 60px auto 50px;   /* ⬅️ 60px top gap added */
   box-sizing: border-box;
   border-radius: 15px;  
+  margin-top: 2px;
 }
 
 .why-container {
